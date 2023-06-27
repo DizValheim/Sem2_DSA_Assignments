@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Q08 
 {
+	static int m,n;
 
 	public static void main(String[] args) 
 	{
@@ -11,15 +12,16 @@ public class Q08
 		Scanner sc = new Scanner(System.in);
 
 		System.out.print("Enter number of Row and Columns of 2D-Array: ");
-		int n = sc.nextInt();
+		m = sc.nextInt();
+		n = sc.nextInt();
 
-		int[][] matrix = new int[n][n];
+		int[][] matrix = new int[m][n];
 		int sum = 0;
 
 		System.out.print("Enter the elements of the matrix: ");
-		for (int i = 0; i < matrix.length; i++) 
+		for (int i = 0; i < m; i++) 
 		{
-			for (int j = 0; j < matrix.length; j++) 
+			for (int j = 0; j < n; j++) 
 			{
 				matrix[i][j] = sc.nextInt();
 				sum+=matrix[i][j];
@@ -36,9 +38,9 @@ public class Q08
 
 	/**Prints the elements of the array one by one.*/	
 	public static void Display(int[][] matrix) {
-		for (int i = 0; i < matrix.length; i++) 
+		for (int i = 0; i < m; i++) 
 		{
-			for (int j = 0; j < matrix.length; j++) 
+			for (int j = 0; j < n; j++) 
 			{
 				System.out.print(matrix[i][j] + " ");
 			}
